@@ -19,13 +19,13 @@ The 200CDS has 2 PC Card slots which I would be using.
 After searching for a while for a compatible card, I decided on the Cisco Aironet 350 because it was PC-Card compatible (PCMCIA cards won't work),
 and I could get it for less than £15 delivered.
 
-![The laptop and the PC card](static/images/vintage_internet/laptop_card.jpg)
+![The laptop and the PC card](/images/vintage_internet/laptop_card.jpg)
 
 For the wireless access point I am using a TP-Link archer C6 running OpenWRT. I like this router as it was quite cheap (around £40) and offers gigabit
 ethernet along with both 5GHz and 2.4GHz. OpenWRT therefore allows me to run 2 networks - one 5GHz with WPA2 for my modern devices, and one with WEP for
 devices like this (which can be easily disabled once I'm finished).
 
-![The router](static/images/vintage_internet/router.jpg)
+![The router](/images/vintage_internet/router.jpg)
 
 ## The software
 
@@ -41,7 +41,7 @@ I first copied the drivers (unzipped) to a floppy and copied them into a folder 
 The first step is to issue the command `pcmcia on`, which enabled the PC Card bus. This gives us the 'IO Base Address' of the bus which we will need later.
 Here it is `0x180`.
 
-![Enabling the PC Card](static/images/vintage_internet/pc_card.jpg)
+![Enabling the PC Card](/images/vintage_internet/pc_card.jpg)
 
 We then need to program in the WPA passkey. Here I'm setting an example WEP key 1 to `passw`, which is a terrible passkey, especially as it uses only one of
 the 4 available keys.
@@ -49,7 +49,7 @@ the 4 available keys.
 To do this we issue the command `wepdos -365 -p 0x180 -ascii -key1 passw`, replacing 0x180 with your IO base address. You can repeat this with keys 1-4 if you
 have set them up on the WAP.
 
-![Setting the WEP key](static/images/vintage_internet/wepdos.jpg)
+![Setting the WEP key](/images/vintage_internet/wepdos.jpg)
 
 The next step is to configure the `cscpkt` driver - the packet driver for the Aironet 350. Open up cscpkt.ini in MS-DOS edit and change (and uncomment)
 the following values:
@@ -60,9 +60,9 @@ the following values:
 - Memory => 0xD000 - The conventional base address of PC cards
 - Socket => 0 (Assuming the card is in socket 0)
 
-![cscpkt.ini part 1](static/images/vintage_internet/cscpkt_1.jpg)
+![cscpkt.ini part 1](/images/vintage_internet/cscpkt_1.jpg)
 
-![cscpkt.ini part 2](static/images/vintage_internet/cscpkt_2.jpg)
+![cscpkt.ini part 2](/images/vintage_internet/cscpkt_2.jpg)
 
 
 The interesting part here is the auth type being set to open. This is because WEPDOS actually flashes the WEP keys to NVRAM on the Aironet card, which makes
@@ -71,7 +71,7 @@ DOS think that the access point is open, whereas in reality the adapter is commu
 Next, we start the packet driver with the command `cscpkt 0x62` - which starts the packet driver at interrupt 0x62. This can be set to any number of interrupts
 but mine is 0x62 because I have another network card that had interrupt 0x62 hard-coded so I keep this interrupt for consistency.
 
-![cscpkt.ini part 2](static/images/vintage_internet/start_cscpkt.jpg)
+![cscpkt.ini part 2](/images/vintage_internet/start_cscpkt.jpg)
 
 At this point the packet driver has been setup and layer 2 communication can occur. We now need a layer 3 (TCP/IP) program.
 
@@ -88,13 +88,13 @@ We then create a file named `mtcp.cfg` with the following contents:
 	GATEWAY 10.0.0.1
 	NAMESERVER 10.0.0.1
 
-![mTCP.cfg](static/images/vintage_internet/mtcp.jpg)
+![mTCP.cfg](/images/vintage_internet/mtcp.jpg)
 
 This tells mTCP programs to use the IP address of `10.0.0.153`, the gateway of `10.0.0.1` and the packet interrupt of `0x62`.
 
 The last thing to do is to set the `MTCPCFG` variable to the location of the mtcp.cfg script. we do this with the command: `set MTCPCFG=C:\mtcp\mtcp.cfg`
 (this can be put into autoexec.bat to be set at launch).
 
-![pinging works](static/images/vintage_internet/ping.jpg)
+![pinging works](/images/vintage_internet/ping.jpg)
 
 As we can see now, the mTCP programs function correctly and we can ping 1.1.1.1.

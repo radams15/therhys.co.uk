@@ -1,0 +1,29 @@
+% layout 'page', title => 'Blog';
+
+<div class="title centre">
+        <h1 class="centre">Blog Posts</h1>
+</div>
+
+<div class="centre_page">
+        <p>Here is some things that I found interesting, maybe you will too:</p>
+        
+        <table id='blog_table'>
+                <tr>
+                        <th>Title</th>
+                        <th>Published</th>
+                        <th>Tags</th>
+                </tr>
+                
+                <% for (@$posts) {%>
+                        <tr>
+                                <td><a href='<%= url_for("/post")->query(name=>$$_{name}) %>'><%= $$_{conf}{Title} %></a></td>
+                                <td><%= $$_{conf}{Published}->strftime('%A %e %B %Y') %></td>
+                                <td>
+                                        <% for (@{$$_{conf}{Tags}}) { %>
+                                                <a class='topic_round' href='<%= url_for("/blog")->query(tags=>[$_]) %>'><%= $_ %></a>
+                                        <% } %>
+                                </td>
+                        </tr>
+                <% } %>
+        </table>
+</div>

@@ -29,7 +29,7 @@ The wiring was simple. All I needed was a **null-modem cable** (a normal serial 
 I connected one end of the cable to the server, and one to the Toshiba.
 
 
-![The serial port on the Toshiba](static/images/serial_networking/ports.jpg)
+![The serial port on the Toshiba](/images/serial_networking/ports.jpg)
 
 
 ## Starting PPPd
@@ -44,7 +44,7 @@ On the server side, I ran the following commands (as root):
 
 I put this in a script named `ppp.sh`.
 
-![ppp.sh](static/images/serial_networking/server_script.png)
+![ppp.sh](/images/serial_networking/server_script.png)
 
 
 ## Connecting on the Toshiba
@@ -52,7 +52,7 @@ I put this in a script named `ppp.sh`.
 Dosppp was an easy setup. The command to run start it is simply: `epppd com1 19200 local`. The com1 was the port I plugged the serial cable into, the Toshiba has
 2 serial ports so this could have been com2 if I plugged it in there. This tells me the packet interrupt selected - mine was 0x60.
 
-![Starting epppd](static/images/serial_networking/epppd.jpg)
+![Starting epppd](/images/serial_networking/epppd.jpg)
 
 In the `C:\mtcp` folder I edited mtcp.cfg to read the following: 
 
@@ -63,7 +63,7 @@ In the `C:\mtcp` folder I edited mtcp.cfg to read the following:
 	GATEWAY 10.0.1.1
 	NAMESERVER 1.1.1.1
 
-![mtcp.cfg](static/images/serial_networking/mtcpcfg.jpg)
+![mtcp.cfg](/images/serial_networking/mtcpcfg.jpg)
 
 I then set the variable `MTCPCFG` to the location of the mtcp.cfg: `set MTCPCFG=C:\mtcp\mtcp.cfg`. Put this in `autoexec.bat` if you want.
 
@@ -71,10 +71,10 @@ Here I've given the new network the subnet of `10.0.1.0/24` with the server bein
 
 Then I can test by pinging cloudflare dns: `ping 1.1.1.1`.
 
-![Ping successful](static/images/serial_networking/ping.jpg)
+![Ping successful](/images/serial_networking/ping.jpg)
 
 We can then do whatever we want on the internet.
 
-![Set the time over sntp](static/images/serial_networking/sntp.jpg)
+![Set the time over sntp](/images/serial_networking/sntp.jpg)
 
-![Telnet to my server](static/images/serial_networking/telnet.jpg)
+![Telnet to my server](/images/serial_networking/telnet.jpg)

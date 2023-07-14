@@ -1,0 +1,54 @@
+<%
+my %MENU = (
+    Home     => '/',
+    About    => '/about',
+    Projects => '/projects',
+    Links    => {
+        'Cloud'               => '/cloud/',
+        'Jellyfin'            => '/jellyfin/',
+        'Transmission'        => '/transmission',
+        'Sonarr'              => '/sonarr/',
+        'Radarr'              => '/radarr/',
+        'Jackett'             => '/jackett/',
+        'Jenkins'             => '/jenkins/',
+        'Github'              => 'https://github.com/radams15',
+        'Github (University)' => 'https://github.com/rhys-cyber',
+    },
+    Blog    => '/blog',
+    Contact => '/contact',
+);
+my @order = qw/ Home About Projects Blog Links Contact /;
+
+sub navbar_items {
+    my ($links, $order) = @_;
+    my @out;
+
+    for (@$order) {
+        my $val     = $$links{$_};
+        my $current = url_for eq $val;
+
+        if (ref $val eq 'HASH') { # Make a dropdown menu as shown by W3 schools.
+            push @out, sprintf("\
+            <div class='dropdown'>
+            	<div class='dropbtn'>
+            		%s
+            	</div>
+            	<div class='dropdown-content'>
+            		%s
+            	</div>
+            </div>", $_, &navbar_items($val, [sort keys %$val]));
+        } else {    # Otherwise add a link to the item.
+            push @out, sprintf("<a href='%s' class='%s'>%s</a>", $val, ($current? 'nav_selected' : ''), $_);
+        }
+    }
+
+    join '', @out;
+}
+%>
+
+<div id='main_nav'>
+	<%== &navbar_items(\%MENU, \@order) %>
+
+
+	<a href='javascript:void(0);' class='icon' onclick='onDropDown()'></a>
+</div>

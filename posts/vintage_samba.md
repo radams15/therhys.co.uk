@@ -70,11 +70,11 @@ I went to Control panel -> Computer name -> change, then changed the domain to '
 
 It showed me a success message, then I needed to reboot my PC.
 
-![Successful domain connection](static/images/vintage_samba/xp_domain_connected.PNG)
+![Successful domain connection](/images/vintage_samba/xp_domain_connected.PNG)
 
 Because of my logon script, the shares auto-mounted and I could browse my shares correctly.
 
-![Successful mounts](static/images/vintage_samba/xp_shares_connected.PNG)
+![Successful mounts](/images/vintage_samba/xp_shares_connected.PNG)
 
 ## Connecting Windows 3.11 for Workgroups
 
@@ -82,9 +82,9 @@ The most complicated one was Windows 3.11, for obvious reasons.
 
 Under Control panel -> Microsoft Windows network -> Startup settings, I ticked 'Log on to Windows NT or LAN Manager domain', then put 'ORA' into the domain name field.
 
-![Network Settings](static/images/vintage_samba/31_network_settings.PNG)
-![Startup Settings](static/images/vintage_samba/31_startup_settings.PNG)
-![Successful mounts](static/images/vintage_samba/31_shares_connected.PNG)
+![Network Settings](/images/vintage_samba/31_network_settings.PNG)
+![Startup Settings](/images/vintage_samba/31_startup_settings.PNG)
+![Successful mounts](/images/vintage_samba/31_shares_connected.PNG)
 
 ## Connecting Windows 10
 
@@ -96,4 +96,4 @@ The only things I needed to do was change the following registry settings:
 
 `HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\DNSNameResolutionRequired = 0`
 
-![Successful mounts](static/images/vintage_samba/10_shares_connected.PNG)
+![Successful mounts](/images/vintage_samba/10_shares_connected.PNG)

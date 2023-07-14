@@ -1,7 +1,3 @@
-FROM docker.io/library/php:8-apache
+FROM docker.io/tekki/mojolicious
 
-RUN apt-get update && apt-get install -y libcgi-application-perl libtext-markdown-perl
-
-RUN a2enmod cgi cgid rewrite
-
-COPY ./default.conf /etc/apache2/sites-enabled/000-default.conf
+RUN cpan -T Text::Markdown
