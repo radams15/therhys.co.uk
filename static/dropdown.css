@@ -1,46 +1,111 @@
-/*
-Error: Invalid CSS after "...und-color: defs": expected ";", was ".$nav_bg;"
-        on line 4 of dropdown.scss
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  border-radius: 5px;
+}
 
-1: @use '_defs';
-2: 
-3: .navbar {
-4: 	background-color: defs.$nav_bg;
-5: 	overflow: hidden;
-6: 	border-radius: 5px;
-7: }
-8: 
-9: /* shameless copy of w3schools with my colouring *\/
+/* shameless copy of w3schools with my colouring */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #abb8c3;
+  background-color: black;
+}
 
-Backtrace:
-dropdown.scss:4
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/nix/store/bdklkxm38s511ygi75ndp16w35yl7j0y-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-/nix/store/gw1cfzw3lc5vn2vj2sw187nx8wh97pvy-sass-3.7.4/bin/sass:35:in `load'
-/nix/store/gw1cfzw3lc5vn2vj2sw187nx8wh97pvy-sass-3.7.4/bin/sass:35:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...und-color: defs\": expected \";\", was \".$nav_bg;\"\A         on line 4 of dropdown.scss\A \A 1: @use '_defs';\A 2: \A 3: .navbar {\A 4: 	background-color: defs.$nav_bg;\A 5: 	overflow: hidden;\A 6: 	border-radius: 5px;\A 7: }\A 8: \A 9: /* shameless copy of w3schools with my colouring */"; }
+.nav_selected {
+  color: white !important;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #abb8c3;
+  padding: 14px 16px;
+  background-color: black;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #666;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #abb8c3;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #666;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {
+    float: none;
+  }
+  .navbar.responsive .dropdown-content {
+    position: relative;
+  }
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=dropdown.css.map */

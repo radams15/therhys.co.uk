@@ -1,46 +1,152 @@
-/*
-Error: Invalid CSS after "...und-color: defs": expected ";", was ".$bg;"
-        on line 4 of style.scss
+html {
+  background-color: #f1f1f1;
+  font-family: "Vollkorn", serif;
+}
 
-1: @use '_defs';
-2: 
-3: html {
-4: 	background-color: defs.$bg;
-5: 	font-family: 'Vollkorn', serif;
-6: }
-7: 
-8: html, body {
-9:     margin:0;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-Backtrace:
-style.scss:4
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/nix/store/75nb2pqxfzbqnpjl0iy8p247z3bf4af1-ruby3.1.4-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/nix/store/bdklkxm38s511ygi75ndp16w35yl7j0y-sass-3.7.4/lib/ruby/gems/3.1.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-/nix/store/gw1cfzw3lc5vn2vj2sw187nx8wh97pvy-sass-3.7.4/bin/sass:35:in `load'
-/nix/store/gw1cfzw3lc5vn2vj2sw187nx8wh97pvy-sass-3.7.4/bin/sass:35:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...und-color: defs\": expected \";\", was \".$bg;\"\A         on line 4 of style.scss\A \A 1: @use '_defs';\A 2: \A 3: html {\A 4: 	background-color: defs.$bg;\A 5: 	font-family: 'Vollkorn', serif;\A 6: }\A 7: \A 8: html, body {\A 9:     margin:0;"; }
+.page {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.content {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.sidebar {
+  float: left;
+  max-width: 200px;
+}
+
+.header {
+  display: flex;
+}
+
+#header_title {
+  justify-content: flex-start;
+}
+
+#motto {
+  justify-content: flex-end;
+  margin-left: auto;
+  align-items: center;
+  color: #abb8c3;
+  max-width: 250px;
+}
+
+#copyright {
+  flex: 1;
+  text-align: right;
+}
+
+@media screen and (min-width: 601px) {
+  :root {
+    --h1: 3em;
+    --h2: 2em;
+    --text: 1em;
+  }
+}
+@media screen and (max-width: 600px) {
+  :root {
+    --h1: 3em;
+    --h2: 2em;
+    --text: 1em;
+  }
+}
+#container {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 1em;
+}
+
+.title {
+  color: black;
+}
+
+.centre {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.centre_page {
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: black;
+  font-family: "Libre Baskerville", serif;
+}
+
+h2 {
+  color: black;
+  font-family: "Libre Baskerville", serif;
+}
+
+a {
+  color: black;
+}
+
+.text {
+  color: black;
+}
+
+li, li a {
+  padding: 5px;
+  color: black;
+}
+
+.topic_round {
+  border-radius: 50%;
+  text-align: center;
+  color: black;
+  width: 5em;
+  padding: 2px;
+  font-size: 0.7em;
+  display: inline;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.footer * {
+  margin-right: 20px;
+  color: #abb8c3;
+}
+
+#blog_table {
+  border-collapse: collapse;
+}
+
+#blog_table tr {
+  border-bottom: 1px solid black;
+  height: 3em;
+}
+
+#blog_table td {
+  padding-right: 1em;
+}
+
+script {
+  display: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */
