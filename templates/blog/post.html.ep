@@ -1,0 +1,15 @@
+% layout 'page', title => 'Post';
+
+<div class="post_body centre_page">
+        <div class='post_infobar'>
+                <p>Published: <%= $$post{conf}{Published}->strftime('%A %e %B %Y') %></p>
+                <p>
+                        Tags:
+                        <% for(@{$$post{conf}{Tags}}) { %>
+                                <a class='topic_round' href='<%= url_for("/blog")->query(tags=>[$_]) %>'><%= $_ %></a>
+                        <% } %>
+                </p>
+        </div>
+        
+        <%== $$post{body} %>
+</div>
