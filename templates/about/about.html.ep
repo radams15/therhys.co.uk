@@ -28,7 +28,7 @@
     </ul>
     <p class="text">Some of my other interests include vintage computers, electronics, and collecting music on a variety of formats.</p>
     <h2 class="centre">The Website</h2>
-    <p class="text">These pages are written from scratch using Perl's CGI.pm which allows a very light, reasonably powerful backend without the need to touch any PHP.</p>
+    <p class="text">These pages are written using Mojolicious - this offers a nice balance between writing my own HTML/CSS, and using a heavy, complex CMS.</p>
     <p class="text">This site is hosted on my home 'server' - a 2012 HP Elitebook 8570p running RHEL 8. I use Podman to run various containers, including:</p>
     <ul>
         <li>An NGINX reverse proxy</li>
