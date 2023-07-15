@@ -5,6 +5,7 @@ pkgs.mkShell {
     perl
     perlPackages.Mojolicious
     perlPackages.TextMarkdown
+    dart-sass
   ];
 }
 

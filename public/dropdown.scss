@@ -3,7 +3,7 @@
 .navbar {
 	background-color: defs.$nav_bg;
 	overflow: hidden;
-	border-radius: 5px;
+	padding: .2em;
 }
 
 /* shameless copy of w3schools with my colouring */
@@ -11,10 +11,11 @@
   float: left;
   font-size: 16px;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 10px;
   text-decoration: none;
   color: defs.$nav_fg;
   background-color: defs.$nav_bg;
+  border-bottom: 2px solid defs.$nav_bg;
 }
 
 .nav_selected {
@@ -33,12 +34,13 @@
   color: defs.$nav_fg;
   padding: 14px 16px;
   background-color: defs.$nav_bg;
+  border-bottom: 2px solid defs.$nav_bg;
   font-family: inherit;
   margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: defs.$nav_bg_hover;
+  border-bottom: 2px solid defs.$nav_fg_hover;
   color: defs.$nav_fg_hover;
 }
 
@@ -54,14 +56,14 @@
 .dropdown-content a {
   float: none;
   color: defs.$nav_fg;
-  padding: 12px 16px;
+  padding: 14px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: defs.$nav_bg_hover;
+  border-bottom: 2px solid defs.$nav_fg_hover;
   color: defs.$nav_fg_hover;
 }
 

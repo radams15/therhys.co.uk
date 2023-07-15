@@ -1,7 +1,7 @@
 .navbar {
-  background-color: black;
+  background-color: #212529;
   overflow: hidden;
-  border-radius: 5px;
+  padding: 0.2em;
 }
 
 /* shameless copy of w3schools with my colouring */
@@ -9,10 +9,11 @@
   float: left;
   font-size: 16px;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 10px;
   text-decoration: none;
-  color: #abb8c3;
-  background-color: black;
+  color: #919b93;
+  background-color: #212529;
+  border-bottom: 2px solid #212529;
 }
 
 .nav_selected {
@@ -28,22 +29,23 @@
   font-size: 16px;
   border: none;
   outline: none;
-  color: #abb8c3;
+  color: #919b93;
   padding: 14px 16px;
-  background-color: black;
+  background-color: #212529;
+  border-bottom: 2px solid #212529;
   font-family: inherit;
   margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #666;
+  border-bottom: 2px solid white;
   color: white;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: #212529;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -51,15 +53,15 @@
 
 .dropdown-content a {
   float: none;
-  color: #abb8c3;
-  padding: 12px 16px;
+  color: #919b93;
+  padding: 14px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #666;
+  border-bottom: 2px solid white;
   color: white;
 }
 

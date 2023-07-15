@@ -1,6 +1,6 @@
 <%
 my %MENU = (
-    Home     => '/',
+    '[RHYS]'     => '/',
     About    => '/about',
     Projects => '/projects',
     Links    => {
@@ -17,7 +17,7 @@ my %MENU = (
     Blog    => '/blog',
     Contact => '/contact',
 );
-my @order = qw/ Home About Projects Blog Links Contact /;
+my @order = qw/ [RHYS] About Projects Blog Links Contact /;
 
 sub navbar_items {
     my ($links, $order) = @_;
@@ -50,5 +50,5 @@ sub navbar_items {
 	<%== &navbar_items(\%MENU, \@order) %>
 
 
-	<a href='javascript:void(0);' class='icon' onclick='onDropDown()'></a>
+	<a href='javascript:void(0);' class='icon' onclick='onDropDown()'>Menu</a>
 </div>

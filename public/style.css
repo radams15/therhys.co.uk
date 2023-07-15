@@ -1,6 +1,6 @@
 html {
-  background-color: #f1f1f1;
-  font-family: "Vollkorn", serif;
+  background-color: #fff;
+  font-family: "Ubuntu", sans-serif;
 }
 
 html, body {
@@ -15,8 +15,6 @@ html, body {
 }
 
 .content {
-  background-color: white;
-  border-radius: 10px;
   margin-top: 30px;
 }
 
@@ -37,7 +35,7 @@ html, body {
   justify-content: flex-end;
   margin-left: auto;
   align-items: center;
-  color: #abb8c3;
+  color: #919b93;
   max-width: 250px;
 }
 
@@ -67,7 +65,7 @@ html, body {
 }
 
 .title {
-  color: black;
+  color: #212529;
 }
 
 .centre {
@@ -85,32 +83,30 @@ html, body {
 }
 
 h1 {
-  color: black;
-  font-family: "Libre Baskerville", serif;
+  color: #212529;
 }
 
 h2 {
-  color: black;
-  font-family: "Libre Baskerville", serif;
+  color: #212529;
 }
 
 a {
-  color: black;
+  color: #212529;
 }
 
 .text {
-  color: black;
+  color: #212529;
 }
 
 li, li a {
   padding: 5px;
-  color: black;
+  color: #212529;
 }
 
 .topic_round {
   border-radius: 50%;
   text-align: center;
-  color: black;
+  color: #212529;
   width: 5em;
   padding: 2px;
   font-size: 0.7em;
@@ -120,7 +116,7 @@ li, li a {
 .footer {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #f8f9fa;
   height: 60px;
   padding: 10px;
   border-radius: 10px;
@@ -129,7 +125,7 @@ li, li a {
 
 .footer * {
   margin-right: 20px;
-  color: #abb8c3;
+  color: #919b93;
 }
 
 #blog_table {
@@ -137,7 +133,7 @@ li, li a {
 }
 
 #blog_table tr {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #212529;
   height: 3em;
 }
 

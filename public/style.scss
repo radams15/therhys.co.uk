@@ -2,7 +2,7 @@
 
 html {
 	background-color: defs.$bg;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 html, body {
@@ -17,8 +17,6 @@ html, body {
 }
 
 .content {
-    background-color: defs.$content_bg;
-    border-radius: 10px;
     margin-top: 30px;
 }
 
@@ -90,12 +88,10 @@ html, body {
 
 h1 {
 	color: defs.$fg;
-    font-family: 'Libre Baskerville', serif;
 }
 
 h2 {
 	color: defs.$fg;
-	font-family: 'Libre Baskerville', serif;
 }
 
 a {
