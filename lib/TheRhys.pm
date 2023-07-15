@@ -21,6 +21,7 @@ sub startup {
         $r->get('/contact')->to ('Contact#contact');
         
         $r->get('/blog')->to ('Blog#posts');
+        $r->get('/blog.rss')->to ('Blog#rss');
         $r->get('/post')->to ('Blog#post');
 }
 
