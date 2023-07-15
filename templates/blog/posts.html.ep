@@ -2,6 +2,7 @@
 
 <div class="title centre">
         <h1 class="centre">Blog Posts</h1>
+        <a href='<%= url_for("/blog.rss"); %>'><img src="/rss.png" width=32 height=32 alt="RSS feed"></a>
 </div>
 
 <div class="centre_page">
