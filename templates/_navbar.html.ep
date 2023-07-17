@@ -50,5 +50,5 @@ sub navbar_items {
 	<%== &navbar_items(\%MENU, \@order) %>
 
 
-	<a href='javascript:void(0);' class='icon' onclick='onDropDown()'></a>
+	<a href='javascript:void(0);' class='icon' onclick='onDropDown()'>Menu</a>
 </div>
