@@ -1,6 +1,6 @@
 html {
   background-color: #f1f1f1;
-  font-family: "Vollkorn", serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 html, body {
@@ -86,12 +86,10 @@ html, body {
 
 h1 {
   color: black;
-  font-family: "Libre Baskerville", serif;
 }
 
 h2 {
   color: black;
-  font-family: "Libre Baskerville", serif;
 }
 
 a {

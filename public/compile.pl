@@ -6,5 +6,5 @@ for(<*.scss>) {
 	print "Compile: $_\n";
 	(my $new = $_) =~ s/\.scss$/.css/g;
 
-	system("sass $_  $new");
+	system("dart-sass $_  $new");
 }
