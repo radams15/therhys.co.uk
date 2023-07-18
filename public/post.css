@@ -16,8 +16,7 @@
 }
 
 .post_body a {
-  display: block;
-  text-align: center;
+  display: inline;
 }
 
 .post_body code {
