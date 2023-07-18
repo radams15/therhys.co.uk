@@ -94,9 +94,20 @@ sub md2html {
     "$out<script src='/run_prettify.js'></script>";
 }
 
+sub md2plain {
+    my ($in) = @_;
+
+    $in =~ s/^#+(.*)$/$1\n------------/gm;
+    $in =~ s/`(.*?)`/$1/gm;
+    $in =~ s/!\[(.*?)\]\((.*?)\)/[$1]/gm;
+    $in =~ s/\<video.*\>[\s\S]*?\<\/video\>/[Video]/gm;
+
+    $in;
+}
+
 sub post {
         my $class = shift;
-        my ($fname) = @_;
+        my ($fname, $format) = @_;
         
         $fname =~ s:/::g;    # Be safe and remove any slashes whatsoever.
 
@@ -110,17 +121,19 @@ sub post {
                 chomp $line;
 
                 my ($k, $v) = split /:\s*/, $line;
-                        $conf{$k} = $v;
+                $conf{$k} = $v;
         }
         my $data = join '', <FH>;                  # Read the rest of the data
         $conf{Published} = Time::Piece->strptime($conf{Published}, '%d/%m/%Y'); # Convert from dd/mm/YYYY to perl Time::Piece format.
         $conf{Tags} = [split ',\s*', $conf{Tags}];    # Split the tags string by comma into a list.
         
         close FH;
-        
+
         my $body;
         if($fname =~ /\.md$/) {
-                 $body = &md2html($data);
+                 $body = (uc $format eq 'PLAIN') ?
+                    &md2plain($data)
+                    : &md2html($data);
         } elsif($fname =~ /\.html$/) {
                  $body = $data;
         } else {

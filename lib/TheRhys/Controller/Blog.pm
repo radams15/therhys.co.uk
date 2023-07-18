@@ -22,9 +22,11 @@ sub post {
 
 sub rss {
         my ($c) = @_;
+
+        my $tags = $c->param('tags') // '';
         
         my @posts = $c->{app}->{blog}->posts(
-                split /,\s*/, $c->param('tags')
+                split /,\s*/, $tags
         );
         
         my $out = sprintf(
@@ -46,10 +48,11 @@ sub rss {
                                 </item>",
                                 $$_{conf}{Title},
                                 $c->url_for("/post")->query(name=>$$_{name}),
-                                $$_{conf}{Published}->strftime('%a, %d %b %Y %H:%M:%S %z')
+                                $$_{conf}{Published}->strftime('%a, %d %b %Y %H:%M:%S %z'),
                         );
                 } @posts)
         );
+
         
         $c->res->headers->content_type('application/rss+xml');
         $c->render(text => $out);
