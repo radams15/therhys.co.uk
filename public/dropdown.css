@@ -1,18 +1,20 @@
 .navbar {
-  background-color: black;
+  background: linear-gradient(180deg, rgb(89, 89, 89) 0%, rgb(57, 57, 57) 100%);
   overflow: hidden;
-  border-radius: 5px;
+  padding: 0.7em;
 }
 
-/* shameless copy of w3schools with my colouring */
-.navbar a {
+.navbar a, .dropdown .dropbtn {
   float: left;
   font-size: 16px;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.5em;
   text-decoration: none;
   color: #abb8c3;
-  background-color: black;
+  background: linear-gradient(180deg, rgb(59, 59, 59) 0%, rgb(39, 39, 39) 100%);
+  border: 2px solid rgb(39, 39, 39);
+  border-radius: 10%;
+  margin-left: 0.8em;
 }
 
 .nav_selected {
@@ -22,17 +24,6 @@
 .dropdown {
   float: left;
   overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: #abb8c3;
-  padding: 14px 16px;
-  background-color: black;
-  font-family: inherit;
-  margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
