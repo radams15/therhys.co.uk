@@ -1,5 +1,7 @@
 package TheRhys::Model::Blog;
 
+use utf8;
+
 use Time::Piece;
 use Text::Markdown qw/ markdown /;
 
@@ -88,7 +90,11 @@ sub md2html {
         }
     );
 
-    $out =~ s/<code>/<code class="prettyprint">/g;
+    $out =~ s:<pre>\s*<code>\s*([\s\S]*?)\s*</code>\s*</pre>:
+        <figure>
+            <code class="prettyprint">\1</code>
+        </figure>
+        :mg;
     $out = &linkify_imgs($out);
 
     "$out<script src='/run_prettify.js'></script>";
@@ -113,7 +119,7 @@ sub post {
 
         $fname = "$class->{post_dir}/$fname";
 
-        open FH, '<', $fname or return;
+        open FH, '<:encoding(utf-8)', $fname or return;
 
         my %conf;
         until ((my $line = <FH>) =~ /^----*/) {    # Read until the first --- marker

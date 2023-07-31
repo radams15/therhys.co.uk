@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use utf8;
 
 use Mojo::File qw(curfile);
 use lib curfile->dirname->sibling('lib')->to_string;

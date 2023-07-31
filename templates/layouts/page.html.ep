@@ -7,33 +7,33 @@
     
     <link rel="stylesheet" href="/ubuntu.css">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/dropdown.css">
     <link rel="stylesheet" href="/post.css">
     
+    <link rel="stylesheet" href="https://the.missing.style">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   </head>
   
   <body>
-    <div class="page">
-      <div class="header">
-        %= include '_header';
-      </div>
-      
-      <div class="navbar">
-        %= include '_navbar', title => $title;
-      </div>
-      
-      <div class="sidebar">
-        %= include '_sidebar';
-      </div>
+    <header class="navbar" data-overflow-nav="">
+      %= include '_navbar', title => $title;
+    </header>
     
-      <div class="content">
-        <%= content %>
-      </div>
-      
-      <div class="footer">
-        %= include '_footer';
-      </div>
+    <!--<div class="header">
+      %= include '_header';
+    </div>-->
+    
+    <div class="sidebar">
+      %= include '_sidebar';
     </div>
+  
+    <main>
+      <%= content %>
+    </main>
+    
+    <footer>
+      %= include '_footer';
+    </footer>
   </body>
 </html>
