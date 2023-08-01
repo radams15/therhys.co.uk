@@ -13,7 +13,7 @@
 
 <nav>
   <p class="tool-bar">
-    <a href="<%= url_for('/') %>">[RHYS]</a>
+    <a href="<%= url_for('/') %>">Home</a>
     <a href="<%= url_for('/about') %>">About</a>
     <a href="<%= url_for('/projects') %>">Projects</a>
     <a href="<%= url_for('/blog') %>">Blog</a>
