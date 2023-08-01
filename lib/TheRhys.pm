@@ -15,6 +15,7 @@ sub startup {
 	$r->get('/')->to ('Info#index');
 	$r->get('/about')->to ('Info#about');
     $r->get('/projects')->to ('Info#projects');
+    $r->get('/links')->to ('Info#links');
     $r->get('/contact')->to ('Info#contact');
     
     $r->get('/blog')->to ('Blog#posts');
