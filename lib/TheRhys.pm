@@ -12,17 +12,14 @@ sub startup {
 
 	my $r = $self->routes;
 
-	$r->get('/')->to ('Index#index');
-	
-	$r->get('/about')->to ('About#about');
-	
-        $r->get('/projects')->to ('Projects#projects');
-        
-        $r->get('/contact')->to ('Contact#contact');
-        
-        $r->get('/blog')->to ('Blog#posts');
-        $r->get('/blog.rss')->to ('Blog#rss');
-        $r->get('/post')->to ('Blog#post');
+	$r->get('/')->to ('Info#index');
+	$r->get('/about')->to ('Info#about');
+    $r->get('/projects')->to ('Info#projects');
+    $r->get('/contact')->to ('Info#contact');
+    
+    $r->get('/blog')->to ('Blog#posts');
+    $r->get('/blog.rss')->to ('Blog#rss');
+    $r->get('/post')->to ('Blog#post');
 }
 
 1;
