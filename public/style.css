@@ -1,3 +1,21 @@
 body {
   font-family: 'Ubuntu', sans-serif;
 }
+
+
+
+#header_container {
+    display: flex;
+}
+
+#header_title {
+    justify-content: flex-start;
+}
+
+#header_motto {
+    justify-content: flex-end;
+    margin-left: auto;
+    align-items: center;
+    max-width: 250px;
+}
+

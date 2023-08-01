@@ -1,2 +1,8 @@
-<h1 id='header_title'>Rhys Adams</h1>
-<p id='motto'>Vintage computing, cyber security and other interesting stuff.</p>
+<div id="header_container">
+  <h1 id="header_title">
+    Rhys Adams
+  </h1>
+  
+  <sub-title id="header_motto">Vintage computing, cyber security and other interesting stuff.</sub-title>
+
+</div>

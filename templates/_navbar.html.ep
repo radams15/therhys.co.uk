@@ -11,13 +11,13 @@
     }
 -->
 
-<nav class="contents">
-  <ul role="list">
-    <li><a href="<%= url_for('/') %>">[RHYS]</a>
-    <li><a href="<%= url_for('/about') %>">About</a>
-    <li><a href="<%= url_for('/projects') %>">Projects</a>
-    <li><a href="<%= url_for('/blog') %>">Blog</a>
-    <li><a href="<%= url_for('/links') %>">Links</a>
-    <li><a href="<%= url_for('/contact') %>">Contact</a>
-  </ul>
+<nav>
+  <p class="tool-bar">
+    <a href="<%= url_for('/') %>">[RHYS]</a>
+    <a href="<%= url_for('/about') %>">About</a>
+    <a href="<%= url_for('/projects') %>">Projects</a>
+    <a href="<%= url_for('/blog') %>">Blog</a>
+    <a href="<%= url_for('/links') %>">Links</a>
+    <a href="<%= url_for('/contact') %>">Contact</a>
+  </p>
 </nav>
