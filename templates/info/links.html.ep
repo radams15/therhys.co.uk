@@ -1,0 +1,15 @@
+% layout 'page', title => 'Links';
+
+<div class="title centre">
+    <h1 class="centre">Links</h1>
+</div>
+
+<div class="about centre_page">
+    <table>
+        <% for(my $i=0 ; $i<scalar(@$links) ; $i+=2) { %>
+            <tr>
+                <td><a href='<%= $links->[$i+1] %>'> <%= $links->[$i] %> </a></td>
+            </tr>
+        <% } %>
+    </table>
+</div>
