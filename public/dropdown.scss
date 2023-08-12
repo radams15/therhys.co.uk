@@ -1,7 +1,7 @@
-@use '_defs';
+@use 'defs';
 
 .navbar {
-	background-color: defs.$nav_bg;
+	background: url(images/woodgrain.png) repeat-x top left;
 	overflow: hidden;
 	padding: .2em;
 }
@@ -11,11 +11,14 @@
   float: left;
   font-size: 16px;
   text-align: center;
-  padding: 14px 10px;
+  padding: 7px 10px;
   text-decoration: none;
   color: defs.$nav_fg;
-  background-color: defs.$nav_bg;
-  border-bottom: 2px solid defs.$nav_bg;
+  background: url(images/button_texture.png) repeat-x top left;
+  margin-left: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 5em;
 }
 
 .nav_selected {
@@ -40,7 +43,6 @@
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  border-bottom: 2px solid defs.$nav_fg_hover;
   color: defs.$nav_fg_hover;
 }
 
