@@ -1,21 +1,23 @@
 .navbar {
-  background: url(images/woodgrain.png) repeat-x top left;
+  background: url(images/wallpaper.jpg) repeat-x top left;
   overflow: hidden;
-  padding: 0.2em;
+  padding: 0.7em;
 }
 
 /* shameless copy of w3schools with my colouring */
-.navbar a {
+.navbar a, .dropdown .dropbtn, .dropdown-content a {
   float: left;
   font-size: 16px;
   text-align: center;
   padding: 7px 10px;
   text-decoration: none;
-  color: #919b93;
-  background: url(images/button_texture.png) repeat-x top left;
+  color: white;
+  background-color: none;
+  background: url(images/pill.png) no-repeat;
+  background-position: center;
   margin-left: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  /*border: 1px solid black;
+  border-radius: 10px;*/
   width: 5em;
 }
 
@@ -28,18 +30,18 @@
   overflow: hidden;
 }
 
+/*
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 16px;  
   border: none;
   outline: none;
-  color: #919b93;
+  color: defs.$nav_fg;
   padding: 14px 16px;
-  background-color: #212529;
-  border-bottom: 2px solid #212529;
+  background-color: defs.$nav_bg;
+  border-bottom: 2px solid defs.$nav_bg;
   font-family: inherit;
   margin: 0;
-}
-
+}*/
 .navbar a:hover, .dropdown:hover .dropbtn {
   color: white;
 }
@@ -47,24 +49,18 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #212529;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #a38d68;
   z-index: 1;
+  padding: 10px;
 }
 
 .dropdown-content a {
   float: none;
-  color: #919b93;
-  padding: 14px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
-}
-
-.dropdown-content a:hover {
-  border-bottom: 2px solid white;
-  color: white;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .dropdown:hover .dropdown-content {
