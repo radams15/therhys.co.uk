@@ -38,17 +38,13 @@
 }
 
 .nav_selected {
-  color: white !important;
+  color: white;
   background: url(images/pill.png) no-repeat;
 }
 
 .dropdown {
   float: left;
   overflow: hidden;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  color: white;
 }
 
 .dropdown-content {
@@ -80,14 +76,15 @@
   }
 
   .navbar a.icon {
-    float: right;
-    display: block;
+    display: flex;
   }
 }
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 700px) {
   .navbar.responsive {
     position: relative;
+    background-color: #a38d68;
+    background-size: cover;
   }
 
   .navbar.responsive a.icon {
@@ -99,7 +96,6 @@
   .navbar.responsive a {
     float: none;
     display: block;
-    text-align: left;
   }
 
   .navbar.responsive .dropdown {
@@ -114,6 +110,16 @@
     display: block;
     width: 100%;
     text-align: left;
+  }
+
+  .navbar.responsive .tool-bar {
+    background-image: none;
+  }
+
+  .tool-bar {
+    background-size: auto;
+    display: block;
+    height: 70%;
   }
 }
 

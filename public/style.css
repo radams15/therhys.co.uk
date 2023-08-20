@@ -1,5 +1,5 @@
 html {
-  background-color: #fff;
+  background-color: #393222;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -14,8 +14,15 @@ body {
   margin: 0 auto;
 }
 
+body p, body td, body th {
+  color: black;
+}
+
 .content {
-  margin-top: 30px;
+  background-color: white;
+  max-width: 700px;
+  margin: 30px auto;
+  border-radius: 10px;
 }
 
 .sidebar {
@@ -51,7 +58,7 @@ body {
 }
 
 .title {
-  color: #212529;
+  color: black;
 }
 
 .centre {
@@ -69,30 +76,30 @@ body {
 }
 
 h1 {
-  color: #212529;
+  color: black;
 }
 
 h2 {
-  color: #212529;
+  color: black;
 }
 
 a {
-  color: #212529;
+  color: black;
 }
 
 .text {
-  color: #212529;
+  color: black;
 }
 
 li, li a {
   padding: 5px;
-  color: #212529;
+  color: black;
 }
 
 .topic_round {
   border-radius: 50%;
   text-align: center;
-  color: #212529;
+  color: black;
   width: 5em;
   padding: 2px;
   font-size: 0.7em;
@@ -102,7 +109,7 @@ li, li a {
 .footer {
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: #292116;
   height: 60px;
   padding: 10px;
   border-radius: 10px;
@@ -111,7 +118,7 @@ li, li a {
 
 .footer * {
   margin-right: 20px;
-  color: white;
+  color: #aaa6a2;
 }
 
 #blog_table {
@@ -119,7 +126,7 @@ li, li a {
 }
 
 #blog_table tr {
-  border-bottom: 1px solid #212529;
+  border-bottom: 1px solid black;
   height: 3em;
 }
 

@@ -11,7 +11,6 @@
 .tool-bar {
 	background: url(images/switcher.jpg) repeat-x;
 	padding:  0 2px 0 2px;
-    //background-size: cover;
     background-size: 100% auto;
     background-position: center;
     height: 30px;
@@ -27,7 +26,6 @@
   float: left;
   font-size: 16px;
   text-align: center;
-  //padding: 7px 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   text-decoration: none;
@@ -45,7 +43,7 @@
 }
 
 .nav_selected {
-    color: defs.$nav_fg_hover !important;
+    color: defs.$nav_fg_hover;
     background: url(images/pill.png) no-repeat;
 }
 
@@ -54,16 +52,10 @@
   overflow: hidden;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  color: defs.$nav_fg_hover;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: defs.$nav_bg;
-  //background: url(images/wallpaper_vertical.jpg) repeat center;
-  //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   padding: 10px;
 }
@@ -93,14 +85,17 @@
     display: none;
   }
   .navbar a.icon {
-    float: right;
-    display: block;
+    display: flex;
   }
 }
 
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 700px) {
-  .navbar.responsive {position: relative;}
+  .navbar.responsive {
+    position: relative;
+    background-color: defs.$nav_bg;
+    background-size: cover;
+  }
   .navbar.responsive a.icon {
     position: absolute;
     right: 0;
@@ -109,14 +104,26 @@
   .navbar.responsive a {
     float: none;
     display: block;
-    text-align: left;
   }
-  .navbar.responsive .dropdown {float: none;}
-  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown {
+    float: none;
+  }
+  .navbar.responsive .dropdown-content {
+    position: relative;
+  }
   .navbar.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
     text-align: left;
   }
+  .navbar.responsive .tool-bar {
+    background-image: none;
+  }
+  .tool-bar {
+    background-size: auto;
+    display: block;
+    height: 70%;
+  }
+  
 }
 

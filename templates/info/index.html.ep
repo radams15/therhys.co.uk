@@ -10,7 +10,7 @@
     </p>
 
     <p class='text'>
-        My GPG key is available <a href='<%= url_for("/radams15.pgp") %>'>here</a>
+        My GPG key is available <a href='<%= url_for("/rhys_adams.pgp") %>'>here</a>
         <code>
             A53C 328F 5CA7 D1EA 4E16  0A58 C783 AD16 F241 1208
         </code>

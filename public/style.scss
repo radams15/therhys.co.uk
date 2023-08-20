@@ -16,13 +16,20 @@ body {
     margin: 0 auto;
 }
 
+body p, body td, body th {
+    color: defs.$fg;
+}
+
 .page {
 
 
 }
 
 .content {
-    margin-top: 30px;
+    background-color: defs.$content_bg;
+    max-width: 700px;
+    margin: 30px auto;
+    border-radius: 10px;
 }
 
 .sidebar {
@@ -109,7 +116,7 @@ li, li a {
 .footer {
     display: flex;
     align-items: center;
-    background-color: defs.$content_bg;
+    background-color: defs.$footer_bg;
     height:60px;
     padding: 10px;
     border-radius: 10px;
@@ -118,7 +125,7 @@ li, li a {
 
 .footer * {
     margin-right: 20px;
-    color: defs.$nav_fg;
+    color: defs.$footer_fg;
 }
 
 #blog_table {
