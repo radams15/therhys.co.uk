@@ -62,6 +62,16 @@ Here is the final version of the samba share:
 
 The only trouble I faced after this setup was that the logon.bat script was not executing. The problem I found was that it needed to be set executable on the server side, so a simple `chmod +x logon.bat` fixed the issue.
 
+## Mapping Groups
+
+```
+# groupadd ntusers
+# groupadd ntadmins
+# net groupmap add ntgroup="Domain Admins" unixgroup=ntadmins rid=512 type=d
+# net groupmap add ntgroup="Domain Users" unixgroup=ntusers rid=513 type=d
+# net groupmap add ntgroup="Domain Guests" unixgroup=nobody rid=514 type=d
+```
+
 ## Connecting Windows XP
 
 XP was the first system I attempted to connect with.
