@@ -10,7 +10,7 @@
   </head>
   
   <body>
-    <div class="navbar">
+    <div class="navbar" id="main_nav">
       %= include '_navbar', title => $title;
     </div>
     

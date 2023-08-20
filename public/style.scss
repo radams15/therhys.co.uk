@@ -11,9 +11,14 @@ html, body {
     height:100%;
 }
 
-.page {
+body {
+    max-width: 1200px;
     margin: 0 auto;
-    max-width: 900px;
+}
+
+.page {
+
+
 }
 
 .content {
@@ -44,22 +49,6 @@ html, body {
 #copyright {
     flex: 1;
     text-align: right;
-}
-
-@media screen and (min-width: 601px) {
-    :root {
-        --h1: 3em;
-        --h2: 2em;
-        --text: 1em;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    :root {
-        --h1: 3em;
-        --h2: 2em;
-        --text: 1em;
-    }
 }
 
 #container {
