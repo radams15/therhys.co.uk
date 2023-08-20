@@ -2,6 +2,7 @@
 
 html {
 	background-color: defs.$bg;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 html, body {
@@ -11,18 +12,24 @@ html, body {
 }
 
 body {
-        font-family: 'Ubuntu', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body p, body td, body th {
+    color: defs.$fg;
 }
 
 .page {
-    margin: 0 auto;
-    max-width: 900px;
+
+
 }
 
 .content {
     background-color: defs.$content_bg;
+    max-width: 700px;
+    margin: 30px auto;
     border-radius: 10px;
-    margin-top: 30px;
 }
 
 .sidebar {
@@ -49,22 +56,6 @@ body {
 #copyright {
     flex: 1;
     text-align: right;
-}
-
-@media screen and (min-width: 601px) {
-    :root {
-        --h1: 3em;
-        --h2: 2em;
-        --text: 1em;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    :root {
-        --h1: 3em;
-        --h2: 2em;
-        --text: 1em;
-    }
 }
 
 #container {
@@ -125,7 +116,7 @@ li, li a {
 .footer {
     display: flex;
     align-items: center;
-    background-color: defs.$content_bg;
+    background-color: defs.$footer_bg;
     height:60px;
     padding: 10px;
     border-radius: 10px;
@@ -134,7 +125,7 @@ li, li a {
 
 .footer * {
     margin-right: 20px;
-    color: defs.$nav_fg;
+    color: defs.$footer_fg;
 }
 
 #blog_table {

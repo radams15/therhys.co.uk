@@ -7,6 +7,10 @@
   display: inline;
 }
 
+.post_body h1 {
+  color: #3a98a6;
+}
+
 .post_body img {
   width: 100%;
 }
