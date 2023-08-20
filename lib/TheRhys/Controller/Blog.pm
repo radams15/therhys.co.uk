@@ -5,7 +5,13 @@ use Mojo::Base 'Mojolicious::Controller', -signatures;
 sub posts {
         my ($c) = @_;
         
-        $c->stash(posts => [$c->{app}->{blog}->posts(split /,\s*/, $c->param('tags'))]);
+        my @posts = $c->{app}->{blog}->posts(
+            split /,\s*/, ($c->param('tags') // '')
+        );
+        
+        $c->stash(
+            posts => \@posts
+        );
         
         return $c->render;
 }

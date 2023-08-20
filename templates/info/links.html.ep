@@ -5,11 +5,9 @@
 </div>
 
 <div class="about centre_page">
-    <table>
+    <ul>
         <% for(my $i=0 ; $i<scalar(@$links) ; $i+=2) { %>
-            <tr>
-                <td><a href='<%= $links->[$i+1] %>'> <%= $links->[$i] %> </a></td>
-            </tr>
+            <li><a href='<%= $links->[$i+1] %>'> <%= $links->[$i] %> </a></li>
         <% } %>
-    </table>
+    </ul>
 </div>
