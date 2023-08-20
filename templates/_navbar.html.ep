@@ -1,9 +1,24 @@
-  <p class="tool-bar">
-    <a href="<%= url_for('/') %>">Home</a>
-    <a href="<%= url_for('/about') %>">About</a>
-    <a href="<%= url_for('/projects') %>">Projects</a>
-    <a href="<%= url_for('/blog') %>">Blog</a>
-    <a href="<%= url_for('/links') %>">Links</a>
-    <a href="<%= url_for('/contact') %>">Contact</a>
+<%
+sub pagelink {
+    my ($title, $url) = @_;
+
+    my $current = url_for() eq $url;
+
+    $url = url_for($url);
+
+    my $classes = $current? 'nav_selected' : '';
+	    
+    return "<a href='$url' class='$classes' >$title</a>";
+}
+%>
+
+<p class="tool-bar">
+    <%== pagelink('Home', '/') %>
+    <%== pagelink('About', '/about') %>
+    <%== pagelink('Projects', '/projects') %>
+    <%== pagelink('Blog', '/blog') %>
+    <%== pagelink('Links', '/links') %>
+    <%== pagelink('Contact', '/contact') %>
+
     <a href="javascript:void(0);" class="icon" onclick="onDropDown()">Menu</a>
-  </p>
+</p>

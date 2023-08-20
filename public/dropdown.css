@@ -6,25 +6,40 @@
   align-items: center;
 }
 
+.tool-bar {
+  background: url(images/switcher.jpg) repeat-x;
+  padding: 0 2px 0 2px;
+  background-size: 100% auto;
+  background-position: center;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* shameless copy of w3schools with my colouring */
 .navbar a, .dropdown .dropbtn, .dropdown-content a {
   float: left;
   font-size: 16px;
   text-align: center;
-  padding: 7px 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-decoration: none;
   color: white;
   background-color: none;
-  background: url(images/pill.png) no-repeat;
   background-position: center;
-  margin-left: 10px;
-  /*border: 1px solid black;
-  border-radius: 10px;*/
-  width: 5em;
+  width: 90px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav_selected {
   color: white !important;
+  background: url(images/pill.png) no-repeat;
 }
 
 .dropdown {
