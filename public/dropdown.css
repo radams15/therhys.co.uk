@@ -1,45 +1,22 @@
 .navbar {
-  background: url(images/wallpaper.jpg) repeat;
+  background-color: black;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tool-bar {
-  background: url(images/switcher.jpg) repeat-x;
-  padding: 0 2px 0 2px;
-  background-size: 100% auto;
-  background-position: center;
-  height: 30px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 5px;
 }
 
 /* shameless copy of w3schools with my colouring */
-.navbar a, .dropdown .dropbtn, .dropdown-content a {
+.navbar a {
   float: left;
   font-size: 16px;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 14px 16px;
   text-decoration: none;
-  color: white;
-  background-color: none;
-  background-position: center;
-  width: 90px;
-  height: 30px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #abb8c3;
+  background-color: black;
 }
 
 .nav_selected {
-  color: white;
-  background: url(images/pill.png) no-repeat;
+  color: white !important;
 }
 
 .dropdown {
@@ -47,19 +24,43 @@
   overflow: hidden;
 }
 
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #abb8c3;
+  padding: 14px 16px;
+  background-color: black;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #666;
+  color: white;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #a38d68;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  padding: 10px;
 }
 
 .dropdown-content a {
   float: none;
+  color: #abb8c3;
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #666;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -70,56 +71,40 @@
   display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .navbar a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
-
   .navbar a.icon {
-    display: flex;
+    float: right;
+    display: block;
   }
 }
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .navbar.responsive {
     position: relative;
-    background-color: #a38d68;
-    background-size: cover;
   }
-
   .navbar.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-
   .navbar.responsive a {
     float: none;
     display: block;
+    text-align: left;
   }
-
   .navbar.responsive .dropdown {
     float: none;
   }
-
   .navbar.responsive .dropdown-content {
     position: relative;
   }
-
   .navbar.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
     text-align: left;
-  }
-
-  .navbar.responsive .tool-bar {
-    background-image: none;
-  }
-
-  .tool-bar {
-    background-size: auto;
-    display: block;
-    height: 70%;
   }
 }
 

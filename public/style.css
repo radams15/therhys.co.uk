@@ -1,6 +1,5 @@
 html {
-  background-color: #393222;
-  font-family: "Ubuntu", sans-serif;
+  background-color: #f1f1f1;
 }
 
 html, body {
@@ -10,19 +9,18 @@ html, body {
 }
 
 body {
-  max-width: 1200px;
-  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
 }
 
-body p, body td, body th {
-  color: black;
+.page {
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 .content {
   background-color: white;
-  max-width: 700px;
-  margin: 30px auto;
   border-radius: 10px;
+  margin-top: 30px;
 }
 
 .sidebar {
@@ -42,7 +40,7 @@ body p, body td, body th {
   justify-content: flex-end;
   margin-left: auto;
   align-items: center;
-  color: white;
+  color: #abb8c3;
   max-width: 250px;
 }
 
@@ -51,6 +49,20 @@ body p, body td, body th {
   text-align: right;
 }
 
+@media screen and (min-width: 601px) {
+  :root {
+    --h1: 3em;
+    --h2: 2em;
+    --text: 1em;
+  }
+}
+@media screen and (max-width: 600px) {
+  :root {
+    --h1: 3em;
+    --h2: 2em;
+    --text: 1em;
+  }
+}
 #container {
   min-height: 100%;
   position: relative;
@@ -109,7 +121,7 @@ li, li a {
 .footer {
   display: flex;
   align-items: center;
-  background-color: #292116;
+  background-color: white;
   height: 60px;
   padding: 10px;
   border-radius: 10px;
@@ -118,7 +130,7 @@ li, li a {
 
 .footer * {
   margin-right: 20px;
-  color: #aaa6a2;
+  color: #abb8c3;
 }
 
 #blog_table {
