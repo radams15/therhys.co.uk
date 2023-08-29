@@ -3,19 +3,9 @@ my %MENU = (
     Home     => '/',
     About    => '/about',
     Projects => '/projects',
-    Links    => {
-        'Cloud'               => '/cloud/',
-        'Jellyfin'            => '/jellyfin/',
-        'Transmission'        => '/transmission',
-        'Sonarr'              => '/sonarr/',
-        'Radarr'              => '/radarr/',
-        'Jackett'             => '/jackett/',
-        'Jenkins'             => '/jenkins/',
-        'Github'              => 'https://github.com/radams15',
-        'Github (University)' => 'https://github.com/rhys-cyber',
-    },
-    Blog    => '/blog',
-    Contact => '/contact',
+    Links    => '/links',
+    Blog     => '/blog',
+    Contact  => '/contact',
 );
 my @order = qw/ Home About Projects Blog Links Contact /;
 
