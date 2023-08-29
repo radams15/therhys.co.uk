@@ -6,8 +6,8 @@
 
 <div class="about centre_page">
     <ul>
-        <% for(my $i=0 ; $i<scalar(@$links) ; $i+=2) { %>
-            <li><a href='<%= $links->[$i+1] %>'> <%= $links->[$i] %> </a></li>
+        <% while(my ($name, $url) = each(%$links)) { %>
+            <li><a href='<%= $url %>'> <%= $name %> </a></li>
         <% } %>
     </ul>
 </div>

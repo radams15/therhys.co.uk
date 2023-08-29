@@ -2,7 +2,7 @@ package TheRhys::Controller::Info;
 
 use Mojo::Base 'Mojolicious::Controller', -signatures;
 
-my @links = (
+my %links = (
     'Cloud'               => '/cloud/',
     'Jellyfin'            => '/jellyfin/',
     'Transmission'        => '/transmission',
@@ -41,7 +41,7 @@ sub projects {
 sub links {
     my ($c) = @_;
 
-    $c->stash(links => \@links);
+    $c->stash(links => \%links);
 
     $c->render;
 }
