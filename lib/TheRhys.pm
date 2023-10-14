@@ -7,6 +7,8 @@ sub startup {
 	my ($self) = @_;
 
 	my $config = $self->plugin ('NotYAMLConfig');
+
+    $self->log->level('error');
 	
 	$self->{blog} = TheRhys::Model::Blog->new($self->home.'/posts');
 
