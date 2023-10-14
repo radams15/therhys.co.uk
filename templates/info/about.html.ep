@@ -33,6 +33,5 @@
     <ul>
         <li>An NGINX reverse proxy</li>
         <li>Cloudflare tunnels to allow outside access to this site</li>
-        <li>Apache httpd with mod_cgi</li>
     </ul>
 </div>
