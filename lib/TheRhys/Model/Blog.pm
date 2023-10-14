@@ -2,6 +2,8 @@ package TheRhys::Model::Blog;
 
 use Time::Piece;
 use Text::Markdown qw/ markdown /;
+use Encode qw(decode_utf8);
+use utf8;
 
 my $POST_DIR = '../../../posts';
 
@@ -142,7 +144,7 @@ sub post {
         
         {
                 conf => \%conf,
-                body => $body
+                body => decode_utf8($body)
         }
 }
 
