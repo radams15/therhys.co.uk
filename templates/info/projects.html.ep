@@ -8,18 +8,18 @@
     <ul>
         <li>
             <div class="block">
-                <a href="<%= url_for('/project/rhyslang') %>">RhysLang</a>
-                <a href="https://github.com/radams15/RhysLang4"><i class="fa fa-github-square"></i></a>
-            </div>
-            A programming language that can compile into x86 assembly, from 8086 assembly up to modern x86_64 assembly. (Assembly, Perl)
-        </li>
-        
-        <li>
-            <div class="block">
                 <a href="<%= url_for('/project/rhysos') %>">RhysOS</a>
                 <a href="https://github.com/radams15/RhysOS4"><i class="fa fa-github-square"></i></a>
             </div>
             A 16-bit operating system written in C for the 8086. Tested on my Toshiba t3100e. Implements: bootloader, filesystem (FAT-12), VFS, graphics and text modes, CLI. (Assembly, C)
+        </li>
+    
+        <li>
+            <div class="block">
+                <a href="<%= url_for('/project/rhyslang') %>">RhysLang</a>
+                <a href="https://github.com/radams15/RhysLang4"><i class="fa fa-github-square"></i></a>
+            </div>
+            A programming language that can compile into x86 assembly, from 8086 assembly up to modern x86_64 assembly. (Assembly, Perl)
         </li>
         
         <li>
