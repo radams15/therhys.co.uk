@@ -12,6 +12,14 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
 .project_image {
   width: 100%;
 }

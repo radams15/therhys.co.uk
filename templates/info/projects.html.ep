@@ -7,27 +7,35 @@
     <p class="text">I have done many projects, here are a few of my favourites:</p>
     <ul>
         <li>
-            <a href="<%= url_for('/project/rhyslang') %>">RhysLang</a>
-            A programming language that can compile into x86 assembly, from 8086 assembly up to modern x86_64 assembly. (ASM, Perl)
-            <a href="https://github.com/radams15/RhysLang4"><i class="fa fa-github-square"></i></a>
+            <div class="block">
+                <a href="<%= url_for('/project/rhyslang') %>">RhysLang</a>
+                <a href="https://github.com/radams15/RhysLang4"><i class="fa fa-github-square"></i></a>
+            </div>
+            A programming language that can compile into x86 assembly, from 8086 assembly up to modern x86_64 assembly. (Assembly, Perl)
         </li>
         
         <li>
-            <a href="<%= url_for('/project/rhysos') %>">RhysOS</a>
-            A 16-bit operating system written in C for the 8086. Tested on my Toshiba t3100e. Implements: bootloader, filesystem (FAT-12), VFS, graphics and text modes, CLI. (ASM, C)
-            <a href="https://github.com/radams15/RhysOS4"><i class="fa fa-github-square"></i></a>
+            <div class="block">
+                <a href="<%= url_for('/project/rhysos') %>">RhysOS</a>
+                <a href="https://github.com/radams15/RhysOS4"><i class="fa fa-github-square"></i></a>
+            </div>
+            A 16-bit operating system written in C for the 8086. Tested on my Toshiba t3100e. Implements: bootloader, filesystem (FAT-12), VFS, graphics and text modes, CLI. (Assembly, C)
         </li>
         
         <li>
-            <a href="#">DMachine</a>
+            <div class="block">
+                <p class="inline">DMachine</p>
+                <a href="https://github.com/radams15/DMachine"><i class="fa fa-github-square"></i></a>
+            </div>
             An equivalent of distrobox for Mac OSX docker containers. (Perl)
-            <a href="https://github.com/radams15/DMachine"><i class="fa fa-github-square"></i></a>
         </li>
         
         <li>
-            <a href="#">Netkit SDK</a>
+            <div class="block">
+                <p class="inline">Netkit SDK</p>
+                <a href="https://github.com/radams15/netkit-sdk"><i class="fa fa-github-square"></i></a>
+            </div>
             A program to generate Netkit-JH labs with code. (Perl)
-            <a href="https://github.com/radams15/netkit-sdk"><i class="fa fa-github-square"></i></a>
         </li>
     </ul>
 </div>
