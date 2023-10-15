@@ -8,61 +8,63 @@ use utf8;
 my $POST_DIR = '../../../posts';
 
 sub new {
-        my $class = shift;
-        my ($post_dir) = @_;
-        
-        bless {
-                post_dir => $post_dir
-        }, $class;
+    my $class = shift;
+    my ($post_dir) = @_;
+
+    bless { post_dir => $post_dir }, $class;
 }
 
-
 sub posts {
-        my $class = shift;
-        my @tags = @_;
-        
-        my @out;
-        
-        my $base = $class->{post_dir};
-        
-        for(<$base/*.{md,html}>) {
-                (my $fname = $_) =~ s:$base/::g;
+    my $class = shift;
+    my @tags  = @_;
 
-                open FH, '<', $_;
-                my %conf;
-                until ((my $line = <FH>) =~ /^----*/) {
-                    next unless $line =~ /.*:.*/g;    # Skip unless there is key: value
-                    chomp $line;
+    my @out;
 
-                    my ($k, $v) = split /:\s*/, $line;
-                    $conf{$k} = $v;
-                }
-                close FH;
+    my $base = $class->{post_dir};
 
-                $conf{Published} = Time::Piece->strptime($conf{Published}, '%d/%m/%Y'); # Convert from dd/mm/YYYY to perl Time::Piece format.
-                $conf{Tags} = [split ',\s*', $conf{Tags}]
-                  ;    # Split the tags string by comma into a list.
+    for (<$base/*.{md,html}>) {
+        (my $fname = $_) =~ s:$base/::g;
 
-                if (@tags) {
-                    for my $tag (@{ $conf{Tags} }) {    # Show only relevant tags if specified.
-                        chomp $tag;
-                        if (grep { $_ eq $tag } @tags) {
-                            push @out, {
-                                name => $fname, 
-                                conf => \%conf
-                            };
-                            last;
-                        }
-                    }
-                } else {
-                    push @out, {
-                        name => $fname, 
-                        conf => \%conf
-                    };
-                }
+        open FH, '<', $_;
+        my %conf;
+        until ((my $line = <FH>) =~ /^----*/) {
+            next unless $line =~ /.*:.*/g;    # Skip unless there is key: value
+            chomp $line;
+
+            my ($k, $v) = split /:\s*/, $line;
+            $conf{$k} = $v;
         }
-        
-        grep {not $$_{conf}{Disabled}} sort { $$b{conf}{Published}->epoch <=> $$a{conf}{Published}->epoch } # Compare the epochs of the dates.
+        close FH;
+
+        $conf{Published} = Time::Piece->strptime($conf{Published}, '%d/%m/%Y')
+          ;    # Convert from dd/mm/YYYY to perl Time::Piece format.
+        $conf{Tags} = [split ',\s*', $conf{Tags}]
+          ;    # Split the tags string by comma into a list.
+
+        if (@tags) {
+            for my $tag (@{ $conf{Tags} })
+            {    # Show only relevant tags if specified.
+                chomp $tag;
+                if (grep { $_ eq $tag } @tags) {
+                    push @out,
+                      {
+                        name => $fname,
+                        conf => \%conf
+                      };
+                    last;
+                }
+            }
+        } else {
+            push @out,
+              {
+                name => $fname,
+                conf => \%conf
+              };
+        }
+    }
+
+    grep { not $$_{conf}{Disabled} }
+      sort { $$b{conf}{Published}->epoch <=> $$a{conf}{Published}->epoch } # Compare the epochs of the dates.
       @out;    # Return sorted by publish date.
 }
 
@@ -108,44 +110,47 @@ sub md2plain {
 }
 
 sub post {
-        my $class = shift;
-        my ($fname, $format) = @_;
-        
-        $fname =~ s:/::g;    # Be safe and remove any slashes whatsoever.
+    my $class = shift;
+    my ($fname, $format) = @_;
 
-        $fname = "$class->{post_dir}/$fname";
+    $fname =~ s:/::g;    # Be safe and remove any slashes whatsoever.
 
-        open FH, '<', $fname or return;
+    $fname = "$class->{post_dir}/$fname";
 
-        my %conf;
-        until ((my $line = <FH>) =~ /^----*/) {    # Read until the first --- marker
-                next unless $line =~ /.*:.*/g;         # Skip unless there is key: value
-                chomp $line;
+    open FH, '<', $fname or return;
 
-                my ($k, $v) = split /:\s*/, $line;
-                $conf{$k} = $v;
-        }
-        my $data = join '', <FH>;                  # Read the rest of the data
-        $conf{Published} = Time::Piece->strptime($conf{Published}, '%d/%m/%Y'); # Convert from dd/mm/YYYY to perl Time::Piece format.
-        $conf{Tags} = [split ',\s*', $conf{Tags}];    # Split the tags string by comma into a list.
-        
-        close FH;
+    my %conf;
+    until ((my $line = <FH>) =~ /^----*/) {    # Read until the first --- marker
+        next unless $line =~ /.*:.*/g;         # Skip unless there is key: value
+        chomp $line;
 
-        my $body;
-        if($fname =~ /\.md$/) {
-                 $body = (uc $format eq 'PLAIN') ?
-                    &md2plain($data)
-                    : &md2html($data);
-        } elsif($fname =~ /\.html$/) {
-                 $body = $data;
-        } else {
-                $body = "ERROR";
-        }
-        
-        {
-                conf => \%conf,
-                body => decode_utf8($body)
-        }
+        my ($k, $v) = split /:\s*/, $line;
+        $conf{$k} = $v;
+    }
+    my $data = join '', <FH>;    # Read the rest of the data
+    $conf{Published} = Time::Piece->strptime($conf{Published}, '%d/%m/%Y')
+      ;    # Convert from dd/mm/YYYY to perl Time::Piece format.
+    $conf{Tags} =
+      [split ',\s*', $conf{Tags}]; # Split the tags string by comma into a list.
+
+    close FH;
+
+    my $body;
+    if ($fname =~ /\.md$/) {
+        $body =
+          (uc $format eq 'PLAIN')
+          ? &md2plain($data)
+          : &md2html($data);
+    } elsif ($fname =~ /\.html$/) {
+        $body = $data;
+    } else {
+        $body = "ERROR";
+    }
+
+    {
+        conf => \%conf,
+        body => decode_utf8($body)
+    };
 }
 
 1;

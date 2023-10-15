@@ -14,6 +14,24 @@ my %linked_pages = (
     'Github (University)' => 'https://github.com/rhys-cyber',
 );
 
+sub init {
+    my $class = shift;
+    my ($base) = @_;
+
+    $base->get('/')->to(action => 'index');
+    $base->get('/about')->to(action => 'about');
+    $base->get('/projects')->to(action => 'projects');
+    $base->get('/contact')->to(action => 'contact');
+    $base->get('/links')->to(action => 'links');
+
+    my $project = $base->any('/project');
+    $project->get('/rhysos')->to(action => 'rhysos');
+    $project->get('/rhyslang')->to(action => 'rhyslang');
+}
+
+sub rhyslang { $_[0]->render; }
+sub rhysos   { $_[0]->render; }
+
 sub index {
     my ($c) = @_;
 
@@ -35,17 +53,16 @@ sub contact {
 sub links {
     my ($c) = @_;
 
-    $c->stash(links => \%linked_pages); 
+    $c->stash(links => \%linked_pages);
 
     $c->render;
 }
 
 sub projects {
     my ($c) = @_;
-    
+
     $c->render;
 }
-
 
 1;
 

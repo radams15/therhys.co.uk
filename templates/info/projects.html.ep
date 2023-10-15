@@ -6,9 +6,28 @@
 <div class="about centre_page">
     <p class="text">I have done many projects, here are a few of my favourites:</p>
     <ul>
-        <li><a href="https://github.com/radams15/RhysLang4">RhysLang</a> - A programming language that can compile into x86 assembly, from 8086 assembly up to modern x86_64 assembly. (ASM, Perl)</li>
-        <li><a href="https://github.com/radams15/RhysOS4">RhysOS</a> - A 16-bit operating system written in C for the 8086. Tested on my Toshiba t3100e. Implements: bootloader, filesystem (FAT-12), VFS, graphics and text modes, CLI. (ASM, C)</li>
-        <li><a href="https://github.com/radams15/DMachine">DMachine</a> - An equivalent of distrobox for Mac OSX docker containers. (Perl)</li>
-        <li><a href="https://github.com/radams15/netkit-sdk">Netkit SDK</a> - A program to generate Netkit-JH labs with code. (Perl)</li>
+        <li>
+            <a href="<%= url_for('/project/rhyslang') %>">RhysLang</a>
+            A programming language that can compile into x86 assembly, from 8086 assembly up to modern x86_64 assembly. (ASM, Perl)
+            <a href="https://github.com/radams15/RhysLang4"><i class="fa fa-github-square"></i></a>
+        </li>
+        
+        <li>
+            <a href="<%= url_for('/project/rhysos') %>">RhysOS</a>
+            A 16-bit operating system written in C for the 8086. Tested on my Toshiba t3100e. Implements: bootloader, filesystem (FAT-12), VFS, graphics and text modes, CLI. (ASM, C)
+            <a href="https://github.com/radams15/RhysOS4"><i class="fa fa-github-square"></i></a>
+        </li>
+        
+        <li>
+            <a href="#">DMachine</a>
+            An equivalent of distrobox for Mac OSX docker containers. (Perl)
+            <a href="https://github.com/radams15/DMachine"><i class="fa fa-github-square"></i></a>
+        </li>
+        
+        <li>
+            <a href="#">Netkit SDK</a>
+            A program to generate Netkit-JH labs with code. (Perl)
+            <a href="https://github.com/radams15/netkit-sdk"><i class="fa fa-github-square"></i></a>
+        </li>
     </ul>
 </div>

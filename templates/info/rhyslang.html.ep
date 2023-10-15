@@ -1,0 +1,47 @@
+% layout 'page', title => 'RhysLang';
+
+<div class='title centre_page centre'>
+    <h1>RhysLang</h1>
+</div>
+
+<div class="about centre_page">
+    <h2>My compiled programming language</h2>
+    
+    <p>Features:</p>
+    <ul>
+        <li>Functions
+        <li>Variables
+        <li>Structures/classes
+        <li>A simple standard library for I/O, memory allocation
+        <li>A preprocessor
+    </ul>
+    
+    <p>Example program: </p>
+    
+    <pre>
+        <code class="prettyprint">
+%%include stdlib
+
+sub main() : void {
+    my file = File.open("test.txt", 2);
+    
+    my i = 10;
+    while(i>0) {
+        file.write("Hello world!\n");
+        i = i-1;
+    }
+
+    file.close();
+    
+    puts('Done!\n');
+    
+    exit(0);
+}
+        </code>
+    </pre>
+    
+    <p>Running the program:</p>
+    <img class="project_image" src="<%= url_for('/images/projects/rhyslang_run.png') %>" alt="Running the program">
+    
+    <script src="<%= url_for('/run_prettify.js') %>"></script>
+</div>

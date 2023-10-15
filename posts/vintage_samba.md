@@ -64,13 +64,11 @@ The only trouble I faced after this setup was that the logon.bat script was not 
 
 ## Mapping Groups
 
-```
-# groupadd ntusers
-# groupadd ntadmins
-# net groupmap add ntgroup="Domain Admins" unixgroup=ntadmins rid=512 type=d
-# net groupmap add ntgroup="Domain Users" unixgroup=ntusers rid=513 type=d
-# net groupmap add ntgroup="Domain Guests" unixgroup=nobody rid=514 type=d
-```
+    # groupadd ntusers
+    # groupadd ntadmins
+    # net groupmap add ntgroup="Domain Admins" unixgroup=ntadmins rid=512 type=d
+    # net groupmap add ntgroup="Domain Users" unixgroup=ntusers rid=513 type=d
+    # net groupmap add ntgroup="Domain Guests" unixgroup=nobody rid=514 type=d
 
 ## Connecting Windows XP
 
@@ -102,8 +100,7 @@ This was basically identical to Windows XP, surprising that nothing has changed 
 
 The only things I needed to do was change the following registry settings:
 
-`HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\DomainCompatibilityMode = 1`
-
-`HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\DNSNameResolutionRequired = 0`
+    HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\DomainCompatibilityMode = 1
+    HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\DNSNameResolutionRequired = 0
 
 ![Successful mounts](/images/vintage_samba/10_shares_connected.PNG)
