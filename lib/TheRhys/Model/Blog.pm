@@ -5,8 +5,6 @@ use Text::Markdown qw/ markdown /;
 use Encode qw(decode_utf8);
 use utf8;
 
-my $POST_DIR = '../../../posts';
-
 sub new {
     my $class = shift;
     my ($post_dir) = @_;
@@ -92,10 +90,8 @@ sub md2html {
         }
     );
 
-    $out =~ s/<code>/<code class="prettyprint">/g;
+    #$out =~ s/<code>/<code class="prettyprint">/g;
     $out = &linkify_imgs($out);
-
-    "$out<script src='/run_prettify.js'></script>";
 }
 
 sub md2plain {

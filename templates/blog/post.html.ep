@@ -1,4 +1,4 @@
-% layout 'page', title => 'Post';
+% layout 'post', title => 'Post';
 
 <div class="post_body centre_page">
         <div class='post_infobar'>
