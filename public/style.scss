@@ -43,22 +43,6 @@ body {
     max-width: 200px;
 }
 
-.header {
-    display: flex;
-}
-
-#header_title {
-    justify-content: flex-start;
-}
-
-#motto {
-    justify-content: flex-end;
-    margin-left: auto;
-    align-items: center;
-    color: defs.$nav_fg;
-    max-width: 250px;
-}
-
 #copyright {
     flex: 1;
     text-align: right;

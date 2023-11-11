@@ -4,7 +4,6 @@
   <head>
     <title> <%= $title %> </title>
     
-    
     <link rel="stylesheet" href="/ubuntu.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/dropdown.css">
@@ -17,12 +16,8 @@
   
   <body>
     <div class="page">
-      <div class="header">
-        %= include '_header';
-      </div>
-      
       <div class="navbar">
-        %= include '_navbar', title => $title;
+        %= include '_header', title => $title;
       </div>
       
       <div class="sidebar">

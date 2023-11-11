@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f1f1;
+  background-color: #f5f3f0;
 }
 
 html, body {
@@ -40,22 +40,6 @@ body {
   max-width: 200px;
 }
 
-.header {
-  display: flex;
-}
-
-#header_title {
-  justify-content: flex-start;
-}
-
-#motto {
-  justify-content: flex-end;
-  margin-left: auto;
-  align-items: center;
-  color: #abb8c3;
-  max-width: 250px;
-}
-
 #copyright {
   flex: 1;
   text-align: right;
@@ -82,7 +66,7 @@ body {
 }
 
 .title {
-  color: black;
+  color: #2c2b2a;
 }
 
 .centre {
@@ -100,30 +84,30 @@ body {
 }
 
 h1 {
-  color: black;
+  color: #2c2b2a;
 }
 
 h2 {
-  color: black;
+  color: #2c2b2a;
 }
 
 a {
-  color: black;
+  color: #2c2b2a;
 }
 
 .text {
-  color: black;
+  color: #2c2b2a;
 }
 
 li, li a {
   padding: 5px;
-  color: black;
+  color: #2c2b2a;
 }
 
 .topic_round {
   border-radius: 50%;
   text-align: center;
-  color: black;
+  color: #2c2b2a;
   width: 5em;
   padding: 2px;
   font-size: 0.7em;
@@ -150,7 +134,7 @@ li, li a {
 }
 
 #blog_table tr {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #2c2b2a;
   height: 3em;
 }
 

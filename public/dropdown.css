@@ -1,18 +1,28 @@
 .navbar {
-  background-color: black;
+  background-color: #4f2a64;
   overflow: hidden;
-  border-radius: 5px;
+  border-bottom: 10px solid #da9345;
 }
 
-/* shameless copy of w3schools with my colouring */
-.navbar a {
+.navbar * {
+  display: inline;
+}
+
+#header_title {
+  margin: auto;
   float: left;
+  padding: 10px;
+  color: #da9345;
+}
+
+.navbar a {
+  float: right;
   font-size: 16px;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   color: #abb8c3;
-  background-color: black;
+  background-color: #4f2a64;
 }
 
 .nav_selected {
@@ -30,7 +40,7 @@
   outline: none;
   color: #abb8c3;
   padding: 14px 16px;
-  background-color: black;
+  background-color: #4f2a64;
   font-family: inherit;
   margin: 0;
 }
@@ -43,7 +53,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: #4f2a64;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;

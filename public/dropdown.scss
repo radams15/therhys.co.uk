@@ -3,12 +3,22 @@
 .navbar {
 	background-color: defs.$nav_bg;
 	overflow: hidden;
-	border-radius: 5px;
+	border-bottom: 10px solid defs.$nav_secondary;
 }
 
-/* shameless copy of w3schools with my colouring */
+.navbar * {
+    display: inline;
+}
+
+#header_title {
+    margin: auto;
+    float: left;
+    padding: 10px;
+    color: defs.$nav_secondary;
+}
+
 .navbar a {
-  float: left;
+  float: right;
   font-size: 16px;
   text-align: center;
   padding: 14px 16px;
