@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 
+% use Mojolicious::Static;
+% my $static = Mojolicious::Static->new;
+
 <html lang="en">
   <head>
     <title> <%= $title %> </title>
     
     
-    <link rel="stylesheet" href="/ubuntu.css">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/dropdown.css">
-    <link rel="stylesheet" href="/post.css">
+    %= asset "style.css"
+    %= asset "ubuntu.css"
+    %= asset "dropdown.css"
+    %= asset "post.css"
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
