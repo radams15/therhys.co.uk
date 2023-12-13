@@ -1,5 +1,7 @@
-FROM docker.io/tekki/mojolicious
+FROM debian:stable
 
-RUN cpan -T Text::Markdown
+RUN apt-get update && apt-get install -y libmojolicious-perl libtext-markdown-perl
+
+WORKDIR /usr/src/app
 
 ENTRYPOINT ["script/site", "prefork", "-m", "production"]
