@@ -1,9 +1,0 @@
-% layout 'page', title => 'Contact';
-
-<div class="title centre">
-        <h1 class="centre">Contact</h1>
-</div>
-
-<div class="about centre_page">
-        <p class="text">Email: rhys &lt;AT&gt; therhys.co.uk</p>
-</div>
