@@ -1,0 +1,11 @@
+<h1>Blog Posts</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+
+    <li>
+      <%= link_to post['conf']['Title'], "/blog/post/"+post['file'] %></a>
+    </li>
+
+  <% end %>
+</ul>
