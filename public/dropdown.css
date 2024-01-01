@@ -4,6 +4,10 @@
   border-radius: 5px;
 }
 
+#header_title a {
+  text-decoration: none;
+}
+
 /* shameless copy of w3schools with my colouring */
 .navbar a {
   float: left;
