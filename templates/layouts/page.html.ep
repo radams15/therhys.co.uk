@@ -5,14 +5,12 @@
     <title> <%= $title %> </title>
     
     
-    <link rel="stylesheet" href="/ubuntu.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/dropdown.css">
     <link rel="stylesheet" href="/post.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script async src="https://analytics.therhys.co.uk/script.js" data-website-id="de1f42d2-43ca-400e-9cd7-62115d823fbf"></script>
   </head>
@@ -39,5 +37,7 @@
         %= include '_footer';
       </div>
     </div>
+
+    <link rel="stylesheet" href="/ubuntu.css">
   </body>
 </html>
