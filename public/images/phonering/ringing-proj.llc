@@ -1,0 +1,11 @@
+{
+  version: 1,
+  mediaFileName: 'ringing.mp4',
+  cutSegments: [
+    {
+      start: 10.871674746250001,
+      end: 13.010114,
+      name: '',
+    },
+  ],
+}
