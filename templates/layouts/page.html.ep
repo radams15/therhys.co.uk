@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script async src="https://analytics.therhys.co.uk/script.js" data-website-id="de1f42d2-43ca-400e-9cd7-62115d823fbf"></script>
+
+    <link rel="stylesheet" href="/ubuntu.css">
   </head>
   
   <body>
@@ -38,6 +40,5 @@
       </div>
     </div>
 
-    <link rel="stylesheet" href="/ubuntu.css">
   </body>
 </html>
