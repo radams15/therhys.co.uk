@@ -7,8 +7,12 @@
 <div class="about centre_page">
     <h2 class="centre">Me</h2>
     <p class="text">I'm currently studying BSc Cyber Security at the University of Warwick.</p>
-    <p class="text">My favourite areas include binary exploitation and reverse engineering, as well as network design and implementation.</p>
+    <p class="text">My favourite areas include web exploitation and reverse engineering, as well as network design and implementation.</p>
+
+    <p class="text">Outside of education I enjoy long walks in the countryside, geocaching and exploring pubs.</p>
+
     <p class="text">Of course, I also thoroughly enjoy programming with a variety of languages and tools:</p>
+
     <ul>
         <li><a href="https://perl.org">Perl</a></li>
         <ul>
