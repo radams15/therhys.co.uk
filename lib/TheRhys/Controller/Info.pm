@@ -6,6 +6,7 @@ my %linked_pages = (
     'Cloud'               => 'https://cloud.therhys.co.uk',
     'Github'              => 'https://github.com/radams15',
     'Github (University)' => 'https://github.com/rhys-cyber',
+    'faversham.pub'       => 'https://faversham.pub',
 );
 
 sub init {
