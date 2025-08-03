@@ -5,6 +5,7 @@ use Mojo::Base 'Mojolicious::Controller', -signatures;
 my %linked_pages = (
     'Github'              => 'https://github.com/radams15',
     'Github (University)' => 'https://github.com/rhys-cyber',
+    'Linkedin'            => 'https://linkedin.com/in/rhys-adams-b96326298',
 );
 
 sub init {
