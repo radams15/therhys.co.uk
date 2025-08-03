@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 
+<!-- 
+Simple HTML/CSS website designed and written by Rhys Adams (https://therhys.co.uk)
+-->
+
 <html lang="en">
   <head>
     <title> <%= $title %> </title>
