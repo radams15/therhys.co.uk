@@ -1,4 +1,4 @@
-% layout 'page', title => 'About';
+% layout 'page', title => 'About Me', description => 'More in-depth information about my education, my interests and how this site was made';
 
 <div class='title centre_page centre'>
     <h1>About</h1>
@@ -6,7 +6,7 @@
 
 <div class="about centre_page">
     <h2 class="centre">Me</h2>
-    <p class="text">I'm currently studying BSc Cyber Security at the University of Warwick.</p>
+    <p class="text">I've recently graduated the BSc Cyber Security course at the University of Warwick.</p>
     <p class="text">My favourite areas include web exploitation and reverse engineering, as well as network design and implementation.</p>
 
     <p class="text">Outside of education I enjoy long walks in the countryside, geocaching, and exploring interesting pubs.</p>
@@ -32,8 +32,8 @@
     </ul>
     <p class="text">Some of my other interests include vintage computers, electronics, and collecting music on a variety of formats.</p>
     <h2 class="centre">The Website</h2>
-    <p class="text">These pages are written using Mojolicious - this offers a nice balance between writing my own HTML/CSS, and using a heavy, complex CMS.</p>
-    <p class="text">This site is hosted on my home 'server' - a 2012 HP Elitebook 8570p running RHEL 8. I use Podman to run various containers, including:</p>
+    <p class="text">This site is written using Mojolicious - this offers a nice balance between writing my own HTML/CSS, and using a more heavy, complex CMS.</p>
+    <p class="text">This site is hosted on my home 'server' - a 2012 HP Elitebook 8570p running Proxmox VE. I use Podman and LXC to run various containers, including:</p>
     <ul>
         <li>An NGINX reverse proxy</li>
         <li>Cloudflare tunnels to allow outside access to this site</li>

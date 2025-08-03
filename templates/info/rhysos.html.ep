@@ -1,4 +1,4 @@
-% layout 'page', title => 'RhysOS';
+% layout 'page', title => 'RhysOS', description => 'My x86 operating system written for the 80286 processor. See some screenshots and features of the OS';
 
 <div class='title centre_page centre'>
     <h1>RhysOS</h1>

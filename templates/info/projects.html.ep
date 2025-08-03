@@ -1,10 +1,10 @@
-% layout 'page', title => 'Projects';
+% layout 'page', title => 'My Projects', description => "I've done many projects, here are a few of my favourite ones";
 
 <div class="title centre">
     <h1 class="centre">Projects</h1>
 </div>
 <div class="about centre_page">
-    <p class="text">I have done many projects, here are a few of my favourites:</p>
+    <p class="text">I've done many projects, here are a few of my favourites:</p>
     <ul>
         <li>
             <div class="block">

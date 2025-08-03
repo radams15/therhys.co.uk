@@ -1,4 +1,4 @@
-% layout 'page', title => 'RhysLang';
+% layout 'page', title => 'RhysLang', description => 'Some information about my RhysLang programming language, build from the ground up to compile into x86 assembly';
 
 <div class='title centre_page centre'>
     <h1>RhysLang</h1>

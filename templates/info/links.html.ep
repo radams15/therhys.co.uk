@@ -1,4 +1,4 @@
-% layout 'page', title => 'Links';
+% layout 'page', title => 'Links', description => 'Some links to my other websites';
 
 <div class="title centre">
     <h1 class="centre">Links</h1>

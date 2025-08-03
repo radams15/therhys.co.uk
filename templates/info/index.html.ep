@@ -1,12 +1,12 @@
-% layout 'page', title => 'Home';
+% layout 'page', title => 'Welcome To My Site', description => "I'm Rhys - I enjoy reverse engineering, programming, Linux and vintage computing. Why not check out my site?";
 
 <div class='title centre_page'>
     <p class='text'>
-        I'm Rhys - I study BSc Cyber Security at the University of Warwick.
+        I'm Rhys - I've recently graduated with a BSc in Cyber Security at the University of Warwick.
     </p>
 
     <p class='text'>
-        I enjoy reverse engineering and low-level programming.
+        I enjoy reverse engineering, low-level programming, Linux and vintage computing, check out my blog posts for more on these.
     </p>
 
     <p class='text'>

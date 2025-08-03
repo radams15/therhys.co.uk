@@ -1,4 +1,4 @@
-% layout 'page', title => 'Contact';
+% layout 'page', title => 'Contact', description => 'Contact me via email';
 
 <div class="title centre">
         <h1 class="centre">Contact</h1>

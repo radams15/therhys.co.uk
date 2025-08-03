@@ -6,8 +6,7 @@ Simple HTML/CSS website designed and written by Rhys Adams (https://therhys.co.u
 
 <html lang="en">
   <head>
-    <title> <%= $title %> </title>
-    
+    <title> Rhys Adams - <%= $title %> </title>
     
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/dropdown.css">
@@ -15,8 +14,10 @@ Simple HTML/CSS website designed and written by Rhys Adams (https://therhys.co.u
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="<%= $description %>">
+    <meta name="author" content="Rhys Adams">
 
-    <script async src="https://analytics.therhys.co.uk/script.js" data-website-id="de1f42d2-43ca-400e-9cd7-62115d823fbf"></script>
+    <!-- <script async src="https://analytics.therhys.co.uk/script.js" data-website-id="de1f42d2-43ca-400e-9cd7-62115d823fbf"></script> -->
 
     <link rel="stylesheet" href="/ubuntu.css">
   </head>
