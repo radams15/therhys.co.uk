@@ -1,2 +1,6 @@
 *.DS_Store
 *.swp
+_site
+_posts_old
+_templates_old
+.jekyll-cache

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!-- 
+Simple HTML/CSS website designed and written by Rhys Adams (https://therhys.co.uk)
+-->
+
+<html lang="en">
+  <head>
+    <title> Rhys Adams - {{ page.title }} </title>
+
+    <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/dropdown.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/post.css" | relative_url }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Rhys Adams">
+
+    <link rel="stylesheet" href="{{ "/assets/ubuntu.css" | relative_url }}">
+  </head>
+  
+  <body>
+    <div class="page">
+      <div class="header">
+        {%- include views/header.html -%}
+      </div>
+      
+      <div class="navbar">
+        {%- include views/navbar.html -%}
+      </div>
+      
+      <div class="sidebar">
+        {%- include views/sidebar.html -%}
+      </div>
+    
+      <div class="content">
+        {{ page.content }}
+      </div>
+      
+      <div class="footer">
+        {%- include views/footer.html -%}
+      </div>
+    </div>
+
+  </body>
+</html>
