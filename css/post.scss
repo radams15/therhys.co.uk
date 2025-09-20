@@ -4,6 +4,7 @@
 @import '_defs';
 
 .post_infobar {
+    
 }
 
 .post_body {
@@ -31,7 +32,7 @@
 	padding: 2px;
 }
 
-.post_body figure {
+.post_body figure,img {
     width: 60%;
     display: flex;
     flex-flow: column;
